@@ -1,1 +1,27 @@
 chemin.md
+
+bin/
+obj/
+
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+*.log
+*.vspscc
+*.vssscc
+
+# Ignore packages
+packages/
+*.nupkg
+*.snupkg
+
+# Ignore Rider project files
+.idea/
+*.sln.iml
+
+.vscode/
+
+*.DS_Store
