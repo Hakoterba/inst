@@ -8,6 +8,14 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
     }
 
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseSqlite("Data Source=inst.db");
+        }
+    }
+
     public DbSet<Post> Posts { get; set; }
     public DbSet<Comment> Comments { get; set; } 
     public DbSet<Like> Likes { get; set; } 
